@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list App - Tasks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center">Welcome To Tasks App</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-10 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-warning text-dark">
+                        <h3>Tasks</h3>
+                    </div>
+                    <div class="card-body">
+                            <ul class="list-group" id="allTasks">
+                               
+                            </ul>
+                    </div>
+                    <div class="card-footer">
+                        <input type="text" class="form-control" id="taskName" placeholder="Add New Task">
+                        <button class="btn btn-warning mt-3" id="addTask">Add Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseApp = firebase.initializeApp({
+            apiKey: "AIzaSyB-k5qTUwcoAaPHQm3ILxlMzAs6dRwoaj8",
+            authDomain: "salalah-om.firebaseapp.com",
+            projectId: "salalah-om",
+            storageBucket: "salalah-om.appspot.com",
+            messagingSenderId: "881244345628",
+            appId: "1:881244345628:web:3e7dc57bcd73cabfe356d9",
+            measurementId: "G-CJMNKHQRPW"
+        });
+
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
+    <script src="./js/tasks.js"></script>
+</body>
+</html>
